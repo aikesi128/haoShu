@@ -10,6 +10,12 @@ import UIKit
 
 class GeneralFactory: NSObject {
 
+    /// 创建两个按钮，并且添加到传进来的target的View上，并设置点击事件
+    ///
+    /// - Parameters:
+    ///   - target: 目标
+    ///   - title1: 按钮标题一
+    ///   - title2: 标题二
     class func addTitleWithTitle(target:UIViewController,title1:String = "关闭",title2:String = "确认"){
     
     

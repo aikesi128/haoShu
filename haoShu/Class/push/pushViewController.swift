@@ -30,15 +30,11 @@ class pushViewController: UIViewController {
         
         let navigationView = UIView.init(frame: CGRect(x: 0,y: -20,width:SCREEN_WIDTH,height: 65))
         
-//        navigationView.backgroundColor = UIColor.green
-        
         navigationView.backgroundColor = UIColor.white
         
         self.navigationController?.navigationBar.addSubview(navigationView)
         
         let addBookBtn = UIButton.init(frame: CGRect(x: 20,y: 20,width: SCREEN_WIDTH,height: 45))
-        
-//        addBookBtn.backgroundColor = UIColor.red
         
         addBookBtn.setImage(UIImage.init(named: "plus circle"), for: .normal)
         

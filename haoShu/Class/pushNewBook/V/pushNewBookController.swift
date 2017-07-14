@@ -9,8 +9,10 @@
 
 import UIKit
 
-class pushNewBookController: UIViewController {
+class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerDelegate{
 
+    var BookTitle: BookTitleView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,15 +20,43 @@ class pushNewBookController: UIViewController {
         
         GeneralFactory.addTitleWithTitle(target: self, title1: "关闭", title2: "发布")
         
-        // Do any additional setup after loading the view.
-    }
+        self.BookTitle = BookTitleView.init(frame: CGRect(x: 0,y: 40,width: SCREEN_WIDTH,height: 160))
+        
+        self.BookTitle?.delegate = self
+        
+        self.BookTitle?.tintColor = UIColor.red
+        
+        self.view.addSubview(self.BookTitle!)
+        
+     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    //BookViewDelegate 点击封面回调的代理方法
+    func choiceCover() {
+        
+        let vc = PhotoPickerController()
+        
+        vc.delegate = self
+        
+        self.present(vc, animated: true, completion: nil)
+      
+        
+        
+        
+    }
+    
+    //!< PhotoPickerDelegate
+    func getImageFromPicker(image: UIImage) {
+        
+        self.BookTitle?.BookCover?.setImage(image, for: .normal)
+    }
+    
+    
+    //按钮的点击方法
     func close() {
         
         self.dismiss(animated: true, completion: nil)
@@ -37,14 +67,11 @@ class pushNewBookController: UIViewController {
     
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view.endEditing(true)
     }
-    */
+   
 
 }
