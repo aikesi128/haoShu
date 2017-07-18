@@ -18,7 +18,7 @@ protocol PhotoPickerDelegate{
     
 }
 
-class PhotoPickerController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class PhotoPickerController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,VPImageCropperDelegate {
 
      var delegate: PhotoPickerDelegate?
     
@@ -31,8 +31,7 @@ class PhotoPickerController: UIViewController,UIImagePickerControllerDelegate,UI
         super.init(nibName: nil, bundle: nil)
         
         self.view.backgroundColor = UIColor.clear
-        
-//        self.view.alpha = 0.2
+        self.view.alpha = 0.2
         
         self.modalPresentationStyle = .overFullScreen
         
@@ -104,7 +103,7 @@ class PhotoPickerController: UIViewController,UIImagePickerControllerDelegate,UI
             
             self.present(self.picker!, animated: true, completion: nil)
             
-            
+            self.alert?.dismiss(animated: true, completion: nil)
             
         }else
         {
@@ -134,6 +133,8 @@ class PhotoPickerController: UIViewController,UIImagePickerControllerDelegate,UI
            
             //!< 可以打来相册
             self.picker?.sourceType = .photoLibrary
+            
+            self.alert?.dismiss(animated: true, completion: nil)
             
             self.present(self.picker!, animated: true, completion: nil)
             
@@ -168,14 +169,40 @@ class PhotoPickerController: UIViewController,UIImagePickerControllerDelegate,UI
         
         let image = info[UIImagePickerControllerOriginalImage]
         
-        self.delegate?.getImageFromPicker(image: image as! UIImage)
-        
         picker.dismiss(animated: true, completion: nil)
         
-        self.dismiss(animated: false, completion: nil)
+//        self.dismiss(animated: false, completion: nil)
+        let vc = VPImageCropperViewController.init(image: image as! UIImage!, cropFrame: CGRect(x: 0,y: 100,width: SCREEN_WIDTH,height: SCREEN_WIDTH * 1.273), limitScaleRatio: 3)
+        
+        vc?.delegate = self
+        
+        self.present(vc!, animated: true, completion: nil)
+        
+//        self.delegate?.getImageFromPicker(image: image as! UIImage)
         
         
     }
+    
+    //corpDelegate
+    func imageCropperDidCancel(_ cropperViewController: VPImageCropperViewController!) {
+        
+        cropperViewController.dismiss(animated: true, completion: nil)
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
+    func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
+        
+         self.delegate?.getImageFromPicker(image: editedImage)
+        
+        cropperViewController.dismiss(animated: true, completion: nil)
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+
     
 }
 

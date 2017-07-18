@@ -45,7 +45,8 @@ class GeneralFactory: NSObject {
         target.view.addSubview(btn2)
         
         btn1.addTarget(target, action: #selector(AVSession.close), for: .touchUpInside)
-        btn1.addTarget(target, action: Selector(("sure")), for: .touchUpInside)
+        
+        btn2.addTarget(target, action: Selector(("sure")), for: .touchUpInside)
 
         
     

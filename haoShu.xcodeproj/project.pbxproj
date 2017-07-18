@@ -33,6 +33,11 @@
 		17448BE51F17884D0067BC02 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17448BE11F17884D0067BC02 /* JVFloatLabeledTextView.m */; };
 		17448BE61F17884D0067BC02 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 17448BE31F17884D0067BC02 /* NSString+TextDirectionality.m */; };
 		17448BE81F1789410067BC02 /* BookTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17448BE71F1789410067BC02 /* BookTitleView.swift */; };
+		175763321F1E20C600E65357 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175763311F1E20C600E65357 /* VPImageCropperViewController.m */; };
+		175763371F1E434F00E65357 /* Push_TitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175763361F1E434F00E65357 /* Push_TitleController.swift */; };
+		175763391F1E436600E65357 /* Push_SocerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175763381F1E436600E65357 /* Push_SocerController.swift */; };
+		1757633B1F1E437000E65357 /* Push_TypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757633A1F1E437000E65357 /* Push_TypeController.swift */; };
+		1757633D1F1E437B00E65357 /* Push_CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757633C1F1E437B00E65357 /* Push_CommentController.swift */; };
 		175F8F6D1F185AFF00EA65A7 /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175F8F6C1F185AFF00EA65A7 /* PhotoPickerController.swift */; };
 		179191DE1F161E3E00BFA05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179191DD1F161E3E00BFA05D /* AppDelegate.swift */; };
 		179191E51F161E3E00BFA05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179191E41F161E3E00BFA05D /* Assets.xcassets */; };
@@ -71,6 +76,12 @@
 		17448BE21F17884D0067BC02 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextDirectionality.h"; sourceTree = "<group>"; };
 		17448BE31F17884D0067BC02 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
 		17448BE71F1789410067BC02 /* BookTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTitleView.swift; sourceTree = "<group>"; };
+		175763301F1E20C600E65357 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		175763311F1E20C600E65357 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		175763361F1E434F00E65357 /* Push_TitleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_TitleController.swift; sourceTree = "<group>"; };
+		175763381F1E436600E65357 /* Push_SocerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_SocerController.swift; sourceTree = "<group>"; };
+		1757633A1F1E437000E65357 /* Push_TypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_TypeController.swift; sourceTree = "<group>"; };
+		1757633C1F1E437B00E65357 /* Push_CommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_CommentController.swift; sourceTree = "<group>"; };
 		175F8F6C1F185AFF00EA65A7 /* PhotoPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
 		179191DA1F161E3E00BFA05D /* haoShu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haoShu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179191DD1F161E3E00BFA05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +223,10 @@
 		171FE7A51F16445800D7A8F9 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				175763361F1E434F00E65357 /* Push_TitleController.swift */,
+				175763381F1E436600E65357 /* Push_SocerController.swift */,
+				1757633A1F1E437000E65357 /* Push_TypeController.swift */,
+				1757633C1F1E437B00E65357 /* Push_CommentController.swift */,
 				171FE7A81F16446900D7A8F9 /* pushNewBookController.swift */,
 				175F8F6C1F185AFF00EA65A7 /* PhotoPickerController.swift */,
 			);
@@ -352,6 +367,7 @@
 		17448BDC1F1788490067BC02 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				1757632F1F1E20C600E65357 /* VPImageCropperViewController */,
 				17448BDD1F17884D0067BC02 /* JVFloatLabeledTextField */,
 			);
 			path = 3rd;
@@ -368,6 +384,15 @@
 				17448BE31F17884D0067BC02 /* NSString+TextDirectionality.m */,
 			);
 			path = JVFloatLabeledTextField;
+			sourceTree = "<group>";
+		};
+		1757632F1F1E20C600E65357 /* VPImageCropperViewController */ = {
+			isa = PBXGroup;
+			children = (
+				175763301F1E20C600E65357 /* VPImageCropperViewController.h */,
+				175763311F1E20C600E65357 /* VPImageCropperViewController.m */,
+			);
+			path = VPImageCropperViewController;
 			sourceTree = "<group>";
 		};
 		179191D11F161E3E00BFA05D = {
@@ -549,16 +574,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				171FE7AC1F1644FF00D7A8F9 /* GeneralFactory.swift in Sources */,
+				1757633D1F1E437B00E65357 /* Push_CommentController.swift in Sources */,
 				17448BE51F17884D0067BC02 /* JVFloatLabeledTextView.m in Sources */,
 				179191DE1F161E3E00BFA05D /* AppDelegate.swift in Sources */,
 				17448BE81F1789410067BC02 /* BookTitleView.swift in Sources */,
 				171FE7991F1621E900D7A8F9 /* pushViewController.swift in Sources */,
+				175763321F1E20C600E65357 /* VPImageCropperViewController.m in Sources */,
 				171FE7951F1621C300D7A8F9 /* rankViewController.swift in Sources */,
 				175F8F6D1F185AFF00EA65A7 /* PhotoPickerController.swift in Sources */,
 				171FE7971F1621E100D7A8F9 /* searchViewController.swift in Sources */,
 				171FE78D1F1620D800D7A8F9 /* config.swift in Sources */,
+				175763371F1E434F00E65357 /* Push_TitleController.swift in Sources */,
+				1757633B1F1E437000E65357 /* Push_TypeController.swift in Sources */,
 				171FE79B1F1621F000D7A8F9 /* moreViewController.swift in Sources */,
 				17448BE61F17884D0067BC02 /* NSString+TextDirectionality.m in Sources */,
+				175763391F1E436600E65357 /* Push_SocerController.swift in Sources */,
 				171FE79D1F1621F900D7A8F9 /* circleViewController.swift in Sources */,
 				17448BE41F17884D0067BC02 /* JVFloatLabeledTextField.m in Sources */,
 				171FE7A91F16446900D7A8F9 /* pushNewBookController.swift in Sources */,
