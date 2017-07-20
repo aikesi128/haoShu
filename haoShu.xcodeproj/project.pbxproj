@@ -35,10 +35,12 @@
 		17448BE81F1789410067BC02 /* BookTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17448BE71F1789410067BC02 /* BookTitleView.swift */; };
 		175763321F1E20C600E65357 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175763311F1E20C600E65357 /* VPImageCropperViewController.m */; };
 		175763371F1E434F00E65357 /* Push_TitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175763361F1E434F00E65357 /* Push_TitleController.swift */; };
-		175763391F1E436600E65357 /* Push_SocerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175763381F1E436600E65357 /* Push_SocerController.swift */; };
 		1757633B1F1E437000E65357 /* Push_TypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757633A1F1E437000E65357 /* Push_TypeController.swift */; };
 		1757633D1F1E437B00E65357 /* Push_CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757633C1F1E437B00E65357 /* Push_CommentController.swift */; };
 		175F8F6D1F185AFF00EA65A7 /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175F8F6C1F185AFF00EA65A7 /* PhotoPickerController.swift */; };
+		176597B51F1F735800D287FB /* btn_star_evaluation_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 176597B11F1F735800D287FB /* btn_star_evaluation_normal.png */; };
+		176597B61F1F735800D287FB /* btn_star_evaluation_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 176597B21F1F735800D287FB /* btn_star_evaluation_press.png */; };
+		176597B71F1F735800D287FB /* LDXScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 176597B41F1F735800D287FB /* LDXScore.m */; };
 		179191DE1F161E3E00BFA05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179191DD1F161E3E00BFA05D /* AppDelegate.swift */; };
 		179191E51F161E3E00BFA05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179191E41F161E3E00BFA05D /* Assets.xcassets */; };
 		179191E81F161E3E00BFA05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179191E61F161E3E00BFA05D /* LaunchScreen.storyboard */; };
@@ -79,10 +81,13 @@
 		175763301F1E20C600E65357 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
 		175763311F1E20C600E65357 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		175763361F1E434F00E65357 /* Push_TitleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_TitleController.swift; sourceTree = "<group>"; };
-		175763381F1E436600E65357 /* Push_SocerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_SocerController.swift; sourceTree = "<group>"; };
 		1757633A1F1E437000E65357 /* Push_TypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_TypeController.swift; sourceTree = "<group>"; };
 		1757633C1F1E437B00E65357 /* Push_CommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push_CommentController.swift; sourceTree = "<group>"; };
 		175F8F6C1F185AFF00EA65A7 /* PhotoPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
+		176597B11F1F735800D287FB /* btn_star_evaluation_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_star_evaluation_normal.png; sourceTree = "<group>"; };
+		176597B21F1F735800D287FB /* btn_star_evaluation_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_star_evaluation_press.png; sourceTree = "<group>"; };
+		176597B31F1F735800D287FB /* LDXScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDXScore.h; sourceTree = "<group>"; };
+		176597B41F1F735800D287FB /* LDXScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDXScore.m; sourceTree = "<group>"; };
 		179191DA1F161E3E00BFA05D /* haoShu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haoShu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179191DD1F161E3E00BFA05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179191E41F161E3E00BFA05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 		171FE79E1F16389100D7A8F9 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				176597B01F1F735800D287FB /* LDXScore */,
 				17448BC11F1788250067BC02 /* Image */,
 				171FE79F1F1638CB00D7A8F9 /* 隶变体.ttf */,
 			);
@@ -224,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				175763361F1E434F00E65357 /* Push_TitleController.swift */,
-				175763381F1E436600E65357 /* Push_SocerController.swift */,
 				1757633A1F1E437000E65357 /* Push_TypeController.swift */,
 				1757633C1F1E437B00E65357 /* Push_CommentController.swift */,
 				171FE7A81F16446900D7A8F9 /* pushNewBookController.swift */,
@@ -395,6 +400,17 @@
 			path = VPImageCropperViewController;
 			sourceTree = "<group>";
 		};
+		176597B01F1F735800D287FB /* LDXScore */ = {
+			isa = PBXGroup;
+			children = (
+				176597B11F1F735800D287FB /* btn_star_evaluation_normal.png */,
+				176597B21F1F735800D287FB /* btn_star_evaluation_press.png */,
+				176597B31F1F735800D287FB /* LDXScore.h */,
+				176597B41F1F735800D287FB /* LDXScore.m */,
+			);
+			path = LDXScore;
+			sourceTree = "<group>";
+		};
 		179191D11F161E3E00BFA05D = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +522,8 @@
 				17448BDB1F1788250067BC02 /* red_point.png in Resources */,
 				17448BD41F1788250067BC02 /* ear2.png in Resources */,
 				17448BDA1F1788250067BC02 /* page4.png in Resources */,
+				176597B51F1F735800D287FB /* btn_star_evaluation_normal.png in Resources */,
+				176597B61F1F735800D287FB /* btn_star_evaluation_press.png in Resources */,
 				17448BD51F1788250067BC02 /* Icon2.png in Resources */,
 				17448BD91F1788250067BC02 /* page3.png in Resources */,
 				171FE7A01F1638CB00D7A8F9 /* 隶变体.ttf in Resources */,
@@ -574,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171FE7AC1F1644FF00D7A8F9 /* GeneralFactory.swift in Sources */,
+				176597B71F1F735800D287FB /* LDXScore.m in Sources */,
 				1757633D1F1E437B00E65357 /* Push_CommentController.swift in Sources */,
 				17448BE51F17884D0067BC02 /* JVFloatLabeledTextView.m in Sources */,
 				179191DE1F161E3E00BFA05D /* AppDelegate.swift in Sources */,
@@ -588,7 +607,6 @@
 				1757633B1F1E437000E65357 /* Push_TypeController.swift in Sources */,
 				171FE79B1F1621F000D7A8F9 /* moreViewController.swift in Sources */,
 				17448BE61F17884D0067BC02 /* NSString+TextDirectionality.m in Sources */,
-				175763391F1E436600E65357 /* Push_SocerController.swift in Sources */,
 				171FE79D1F1621F900D7A8F9 /* circleViewController.swift in Sources */,
 				17448BE41F17884D0067BC02 /* JVFloatLabeledTextField.m in Sources */,
 				171FE7A91F16446900D7A8F9 /* pushNewBookController.swift in Sources */,

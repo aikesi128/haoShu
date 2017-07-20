@@ -21,6 +21,9 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
     
     var Book_Title = ""
     
+    var scoreStart:LDXScore?
+    
+    var showStart = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +54,19 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         self.view.addSubview(self.tableView!)
         
         self.dataSource = ["标题","评分","分类","书评"]
+        
+        scoreStart = LDXScore.init(frame: CGRect(x:100,y:10 ,width:100 ,height: 22))
+        
+        scoreStart?.max_star = 5
+        
+        scoreStart?.show_star = 5
+        
+        scoreStart?.isSelect = true
+        
+        scoreStart?.normalImg = UIImage.init(named: "btn_star_evaluation_normal")
+        
+        scoreStart?.highlightImg = UIImage.init(named: "btn_star_evaluation_press")
+        
         
         
      }
@@ -147,6 +163,15 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
             cell?.detailTextLabel?.text = self.Book_Title
         }
         
+        if self.showStart && indexPath.row == 2 {
+            
+            cell?.contentView.addSubview(self.scoreStart!)
+            
+            cell?.accessoryType = .none
+            
+        }
+        
+        
         
         return cell!
     }
@@ -155,7 +180,15 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        switch indexPath.row {
+        var row = indexPath.row
+        
+        
+        if self.showStart && row > 1{
+            
+            row = row - 1
+        }
+        
+        switch row {
         case 0:
             
             self.didSelectTitle()
@@ -165,6 +198,9 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         case 1:
             
             self.didSelectSocer()
+            
+            
+            
             
             break
             
@@ -216,11 +252,39 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
     
     func didSelectSocer(){
         
-        let vc = Push_SocerController()
+        self.tableView?.beginUpdates()
         
-        GeneralFactory.addTitleWithTitle(target: vc)
+        let indexPaths = [NSIndexPath.init(row: 2, section: 0)]
         
-        self.present(vc, animated: true, completion: nil)
+        if self.showStart {
+        
+            //!< 取消星星
+            self.dataSource.remove(at: 2)
+            
+            self.tableView?.deleteRows(at: indexPaths as [IndexPath], with: .right)
+            
+            self.showStart = false
+            
+            
+        }else
+        {
+            //!< 展示星星
+            self.dataSource.insert("", at: 2)
+            
+            self.tableView?.insertRows(at: indexPaths as [IndexPath], with: .left)
+            
+            self.showStart = true
+        
+        
+        
+        }
+        
+        
+        
+        
+        
+        
+        self.tableView?.endUpdates()
         
     }
     
@@ -246,7 +310,11 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         
     }
     
+     deinit{
     
+        print("push controller deinit")
+    
+    }
    
 
 }
