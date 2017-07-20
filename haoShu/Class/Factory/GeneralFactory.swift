@@ -29,12 +29,16 @@ class GeneralFactory: NSObject {
         
         btn1.titleLabel?.font = UIFont.init(name: MY_FONT, size: 14)
         
+        btn1.tag = 1234
+        
         target.view.addSubview(btn1)
         
         
         let btn2  = UIButton.init(frame: CGRect(x:SCREEN_WIDTH - 50,y: 20,width: 40,height: 20))
         
         btn2.setTitle(title2, for: .normal)
+        
+        btn2.tag = 1235
         
         btn2.contentHorizontalAlignment = .right
         

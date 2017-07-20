@@ -278,12 +278,7 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         
         
         }
-        
-        
-        
-        
-        
-        
+
         self.tableView?.endUpdates()
         
     }
@@ -294,6 +289,16 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         let vc = Push_TypeController()
         
         GeneralFactory.addTitleWithTitle(target: vc)
+        
+        //!< 取出俩个按钮，修改按钮字体颜色
+        let btn1 = vc.view.viewWithTag(1234) as? UIButton
+        
+        let btn2 = vc.view.viewWithTag(1235) as? UIButton
+        
+        btn1?.setTitleColor(RGB(r: 38, g: 82, b: 67), for: .normal)
+        btn2?.setTitleColor(RGB(r: 38, g: 82, b: 67), for: .normal)
+        
+        vc.modalTransitionStyle = .crossDissolve
         
         self.present(vc, animated: true, completion: nil)
         
