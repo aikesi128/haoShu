@@ -8,8 +8,12 @@
 
 import UIKit
 
+typealias Push_TypeControllerBlock = (_ type: String,_ detailType: String) -> Void
+
 class Push_TypeController: UIViewController,IGLDropDownMenuDelegate {
 
+    var callBack: Push_TypeControllerBlock?
+    
     var segmentController1: AKSegmentedControl?
     var segmentController2: AKSegmentedControl?
 
@@ -407,6 +411,10 @@ class Push_TypeController: UIViewController,IGLDropDownMenuDelegate {
     
     
     func sure(){
+        
+        self.callBack!(type,detaileType)
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
 

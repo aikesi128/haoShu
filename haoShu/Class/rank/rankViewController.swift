@@ -13,23 +13,20 @@ class rankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        let label = UILabel.init(frame: CGRect(x: 0,y: 0,width: 200,height: 80))
-        
-        label.center = self.view.center
-        
-        label.textAlignment = .center
-        
-        label.adjustsFontSizeToFitWidth = true
-        
-        label.text = "Joyce is 朱俊武"
-        
-        label.font = UIFont.init(name: MY_FONT, size: 19)
-        
-        label.textColor = UIColor.green
-        
-        self.view.addSubview(label)
+       
+        if AVUser.current() == nil
+        {
+            
+            let story = UIStoryboard.init(name: "Login", bundle: nil)
+            
+            let vc = story.instantiateViewController(withIdentifier: "login")
+            
+            vc.modalTransitionStyle = .crossDissolve
+            
+            self.present(vc, animated: true, completion: nil)
+            
+            
+        }
 
         
     }

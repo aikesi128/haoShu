@@ -25,6 +25,12 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
     
     var showStart = false
     
+    var type = "文学"
+    
+    var detailType = "文学"
+    
+    var comment = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -171,6 +177,34 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
             
         }
         
+        var row = indexPath.row
+        if self.showStart && row>1
+        {
+            row = row - 1
+            
+        }
+        
+        if row == 2 {
+            
+            cell?.detailTextLabel?.text = type + "->" + detailType
+            
+        }
+        
+        if row == 4
+        {
+            
+            cell?.accessoryType = .none
+            
+            let commentView = UITextView.init(frame: CGRect(x:4,y:4,width:SCREEN_WIDTH - 8,height:80))
+//            commentView.backgroundColor = UIColor.red
+            commentView.text = comment
+            commentView.font = UIFont.init(name: MY_FONT, size: 14)
+            commentView.isEditable = false
+            cell?.contentView.addSubview(commentView)
+            
+            
+            
+        }
         
         
         return cell!
@@ -223,6 +257,26 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if showStart && indexPath.row > 5
+        {
+            
+            return 88
+            
+        }else if !self.showStart && indexPath.row > 4
+        {
+            return 88
+        
+        }else
+        {
+            return 44
+        }
+        
+        
+        
+    }
     
     //!< 选择标题
     
@@ -299,6 +353,23 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         btn2?.setTitleColor(RGB(r: 38, g: 82, b: 67), for: .normal)
         
         vc.modalTransitionStyle = .crossDissolve
+        vc.type = type
+        vc.detaileType = detailType
+        
+        //!< callback 回传值过来
+        vc.callBack = ({(type,detailType) -> Void in
+        
+            
+            self.type = type
+            
+            self.detailType = detailType
+            
+            self.tableView?.reloadData()
+            
+        
+        
+        })
+        
         
         self.present(vc, animated: true, completion: nil)
         
@@ -310,6 +381,24 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         let vc = Push_CommentController()
         
         GeneralFactory.addTitleWithTitle(target: vc)
+        
+        vc.textView?.text = self.comment
+        
+        vc.callBack = ({(comment) -> Void in
+        
+            self.comment = comment
+            
+            if self.dataSource.last == "" {
+                self.dataSource.removeLast()
+            }
+            if comment != "" {
+                self.dataSource.append("")
+            }
+            self.tableView?.reloadData()
+        
+        
+        })
+        
         
         self.present(vc, animated: true, completion: nil)
         

@@ -60,9 +60,13 @@
 		176597B51F1F735800D287FB /* btn_star_evaluation_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 176597B11F1F735800D287FB /* btn_star_evaluation_normal.png */; };
 		176597B61F1F735800D287FB /* btn_star_evaluation_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 176597B21F1F735800D287FB /* btn_star_evaluation_press.png */; };
 		176597B71F1F735800D287FB /* LDXScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 176597B41F1F735800D287FB /* LDXScore.m */; };
+		1769C56D1F26060900447271 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769C56C1F26060900447271 /* Login.storyboard */; };
+		1769C56F1F26069E00447271 /* JJLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769C56E1F26069E00447271 /* JJLoginViewController.swift */; };
+		1769C5711F2606AC00447271 /* JJRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769C5701F2606AC00447271 /* JJRegisterViewController.swift */; };
 		179191DE1F161E3E00BFA05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179191DD1F161E3E00BFA05D /* AppDelegate.swift */; };
 		179191E51F161E3E00BFA05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179191E41F161E3E00BFA05D /* Assets.xcassets */; };
 		179191E81F161E3E00BFA05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179191E61F161E3E00BFA05D /* LaunchScreen.storyboard */; };
+		179FFBDF1F20DA8B00C5FBF5 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 179FFBDE1F20DA8B00C5FBF5 /* XKeyBoard.m */; };
 		762D6DDC2BBEDAB63AD22B45 /* libPods-haoShu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84489A8E54B46FA7191E385 /* libPods-haoShu.a */; };
 /* End PBXBuildFile section */
 
@@ -129,11 +133,16 @@
 		176597B21F1F735800D287FB /* btn_star_evaluation_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_star_evaluation_press.png; sourceTree = "<group>"; };
 		176597B31F1F735800D287FB /* LDXScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDXScore.h; sourceTree = "<group>"; };
 		176597B41F1F735800D287FB /* LDXScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDXScore.m; sourceTree = "<group>"; };
+		1769C56C1F26060900447271 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		1769C56E1F26069E00447271 /* JJLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJLoginViewController.swift; sourceTree = "<group>"; };
+		1769C5701F2606AC00447271 /* JJRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJRegisterViewController.swift; sourceTree = "<group>"; };
 		179191DA1F161E3E00BFA05D /* haoShu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haoShu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179191DD1F161E3E00BFA05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179191E41F161E3E00BFA05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179191E71F161E3E00BFA05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		179191E91F161E3E00BFA05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		179FFBDD1F20DA8B00C5FBF5 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
+		179FFBDE1F20DA8B00C5FBF5 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
 		3124DBE7F1148A68505FE5FC /* Pods-haoShu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haoShu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-haoShu/Pods-haoShu.debug.xcconfig"; sourceTree = "<group>"; };
 		9E7EF6787420D3A421D868D3 /* Pods-haoShu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haoShu.release.xcconfig"; path = "Pods/Target Support Files/Pods-haoShu/Pods-haoShu.release.xcconfig"; sourceTree = "<group>"; };
 		F84489A8E54B46FA7191E385 /* libPods-haoShu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-haoShu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +172,7 @@
 		171FE78E1F16219E00D7A8F9 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				1769C56B1F2605FD00447271 /* Login */,
 				17448BDC1F1788490067BC02 /* 3rd */,
 				171FE7AA1F1644E900D7A8F9 /* Factory */,
 				171FE7A41F16445800D7A8F9 /* pushNewBook */,
@@ -412,6 +422,7 @@
 		17448BDC1F1788490067BC02 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				179FFBDC1F20DA8B00C5FBF5 /* XKeyBoard */,
 				1757D6471F20468900DAC6CB /* IGLDropDownMenu */,
 				17448BC11F1788250067BC02 /* Image */,
 				176597B01F1F735800D287FB /* LDXScore */,
@@ -501,6 +512,16 @@
 			path = ../../resource/LDXScore;
 			sourceTree = "<group>";
 		};
+		1769C56B1F2605FD00447271 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1769C56C1F26060900447271 /* Login.storyboard */,
+				1769C56E1F26069E00447271 /* JJLoginViewController.swift */,
+				1769C5701F2606AC00447271 /* JJRegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		179191D11F161E3E00BFA05D = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +553,15 @@
 				171FE78C1F1620D800D7A8F9 /* config.swift */,
 			);
 			path = haoShu;
+			sourceTree = "<group>";
+		};
+		179FFBDC1F20DA8B00C5FBF5 /* XKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				179FFBDD1F20DA8B00C5FBF5 /* XKeyBoard.h */,
+				179FFBDE1F20DA8B00C5FBF5 /* XKeyBoard.m */,
+			);
+			path = XKeyBoard;
 			sourceTree = "<group>";
 		};
 		1C2CDDC50DDB722AA386EF4B /* Frameworks */ = {
@@ -628,6 +658,7 @@
 				1757D63A1F20432800DAC6CB /* segmented-bg-pressed-left@2x.png in Resources */,
 				1757D6401F20432900DAC6CB /* segmented-separator@2x.png in Resources */,
 				1757D6371F20432800DAC6CB /* segmented-bg-pressed-center.png in Resources */,
+				1769C56D1F26060900447271 /* Login.storyboard in Resources */,
 				1757D6411F20432900DAC6CB /* settings-icon.png in Resources */,
 				1757D6421F20432900DAC6CB /* settings-icon@2x.png in Resources */,
 				171FE7A01F1638CB00D7A8F9 /* 隶变体.ttf in Resources */,
@@ -707,9 +738,12 @@
 				17448BE81F1789410067BC02 /* BookTitleView.swift in Sources */,
 				171FE7991F1621E900D7A8F9 /* pushViewController.swift in Sources */,
 				175763321F1E20C600E65357 /* VPImageCropperViewController.m in Sources */,
+				1769C56F1F26069E00447271 /* JJLoginViewController.swift in Sources */,
 				1757D64C1F20468900DAC6CB /* IGLDropDownItem.m in Sources */,
+				179FFBDF1F20DA8B00C5FBF5 /* XKeyBoard.m in Sources */,
 				171FE7951F1621C300D7A8F9 /* rankViewController.swift in Sources */,
 				175F8F6D1F185AFF00EA65A7 /* PhotoPickerController.swift in Sources */,
+				1769C5711F2606AC00447271 /* JJRegisterViewController.swift in Sources */,
 				171FE7971F1621E100D7A8F9 /* searchViewController.swift in Sources */,
 				171FE78D1F1620D800D7A8F9 /* config.swift in Sources */,
 				175763371F1E434F00E65357 /* Push_TitleController.swift in Sources */,
