@@ -91,6 +91,7 @@
                     </view>
                     <connections>
                         <outlet property="passWord" destination="qDU-Ss-NoF" id="wo5-Ni-NlU"/>
+                        <outlet property="topLayout" destination="KfK-EG-AX7" id="ENu-mG-4ev"/>
                         <outlet property="userName" destination="u84-5c-T17" id="gSz-Kp-541"/>
                     </connections>
                 </viewController>
@@ -194,12 +195,13 @@
                     <connections>
                         <outlet property="email" destination="wS1-kw-t7X" id="CCo-vy-pfW"/>
                         <outlet property="passWord" destination="thy-Z7-Vn0" id="br4-FX-lP7"/>
+                        <outlet property="toplayout" destination="Eb2-h4-AJW" id="O5d-oA-HvS"/>
                         <outlet property="userName" destination="raZ-iP-z6q" id="pGK-zI-wcw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHN-sU-xzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="179"/>
+            <point key="canvasLocation" x="644" y="178.56071964017991"/>
         </scene>
     </scenes>
     <resources>

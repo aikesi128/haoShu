@@ -56,6 +56,8 @@
 		1757D6461F20432900DAC6CB /* star-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1757D6351F20432800DAC6CB /* star-icon@2x.png */; };
 		1757D64C1F20468900DAC6CB /* IGLDropDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1757D6491F20468900DAC6CB /* IGLDropDownItem.m */; };
 		1757D64D1F20468900DAC6CB /* IGLDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1757D64B1F20468900DAC6CB /* IGLDropDownMenu.m */; };
+		175BB3131F275F2D0041C5C4 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 175BB3101F275F2D0041C5C4 /* ProgressHUD.bundle */; };
+		175BB3141F275F2D0041C5C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 175BB3121F275F2D0041C5C4 /* ProgressHUD.m */; };
 		175F8F6D1F185AFF00EA65A7 /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175F8F6C1F185AFF00EA65A7 /* PhotoPickerController.swift */; };
 		176597B51F1F735800D287FB /* btn_star_evaluation_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 176597B11F1F735800D287FB /* btn_star_evaluation_normal.png */; };
 		176597B61F1F735800D287FB /* btn_star_evaluation_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 176597B21F1F735800D287FB /* btn_star_evaluation_press.png */; };
@@ -128,6 +130,9 @@
 		1757D6491F20468900DAC6CB /* IGLDropDownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownItem.m; sourceTree = "<group>"; };
 		1757D64A1F20468900DAC6CB /* IGLDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownMenu.h; sourceTree = "<group>"; };
 		1757D64B1F20468900DAC6CB /* IGLDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenu.m; sourceTree = "<group>"; };
+		175BB3101F275F2D0041C5C4 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		175BB3111F275F2D0041C5C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		175BB3121F275F2D0041C5C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		175F8F6C1F185AFF00EA65A7 /* PhotoPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
 		176597B11F1F735800D287FB /* btn_star_evaluation_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_star_evaluation_normal.png; sourceTree = "<group>"; };
 		176597B21F1F735800D287FB /* btn_star_evaluation_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_star_evaluation_press.png; sourceTree = "<group>"; };
@@ -422,6 +427,7 @@
 		17448BDC1F1788490067BC02 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				175BB30F1F275F2D0041C5C4 /* ProgressHUD */,
 				179FFBDC1F20DA8B00C5FBF5 /* XKeyBoard */,
 				1757D6471F20468900DAC6CB /* IGLDropDownMenu */,
 				17448BC11F1788250067BC02 /* Image */,
@@ -498,6 +504,16 @@
 				1757D64B1F20468900DAC6CB /* IGLDropDownMenu.m */,
 			);
 			path = IGLDropDownMenu;
+			sourceTree = "<group>";
+		};
+		175BB30F1F275F2D0041C5C4 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				175BB3101F275F2D0041C5C4 /* ProgressHUD.bundle */,
+				175BB3111F275F2D0041C5C4 /* ProgressHUD.h */,
+				175BB3121F275F2D0041C5C4 /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		176597B01F1F735800D287FB /* LDXScore */ = {
@@ -667,6 +683,7 @@
 				17448BD31F1788250067BC02 /* ear1.png in Resources */,
 				179191E51F161E3E00BFA05D /* Assets.xcassets in Resources */,
 				1757D63F1F20432900DAC6CB /* segmented-separator.png in Resources */,
+				175BB3131F275F2D0041C5C4 /* ProgressHUD.bundle in Resources */,
 				17448BD01F1788250067BC02 /* blank.png in Resources */,
 				1757D6381F20432800DAC6CB /* segmented-bg-pressed-center@2x.png in Resources */,
 				17448BD11F1788250067BC02 /* Blank2.png in Resources */,
@@ -742,6 +759,7 @@
 				1757D64C1F20468900DAC6CB /* IGLDropDownItem.m in Sources */,
 				179FFBDF1F20DA8B00C5FBF5 /* XKeyBoard.m in Sources */,
 				171FE7951F1621C300D7A8F9 /* rankViewController.swift in Sources */,
+				175BB3141F275F2D0041C5C4 /* ProgressHUD.m in Sources */,
 				175F8F6D1F185AFF00EA65A7 /* PhotoPickerController.swift in Sources */,
 				1769C5711F2606AC00447271 /* JJRegisterViewController.swift in Sources */,
 				171FE7971F1621E100D7A8F9 /* searchViewController.swift in Sources */,

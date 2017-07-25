@@ -13,7 +13,7 @@ class rankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+       AVUser.logOut()
         if AVUser.current() == nil
         {
             
