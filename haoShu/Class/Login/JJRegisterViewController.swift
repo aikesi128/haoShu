@@ -92,7 +92,7 @@ class JJRegisterViewController: UIViewController {
     
         UIView .animate(withDuration: 0.25) { 
             
-            self.toplayout.constant = 200
+            self.toplayout.constant = -200
             
             self.view.layoutIfNeeded()
             

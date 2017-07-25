@@ -65,7 +65,7 @@ class JJLoginViewController: UIViewController {
         
         UIView .animate(withDuration: 0.25) {
             
-            self.topLayout.constant = 200
+            self.topLayout.constant = -200
             
             self.view.layoutIfNeeded()
             
