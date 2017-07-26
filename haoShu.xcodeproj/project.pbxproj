@@ -69,6 +69,7 @@
 		179191E51F161E3E00BFA05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179191E41F161E3E00BFA05D /* Assets.xcassets */; };
 		179191E81F161E3E00BFA05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179191E61F161E3E00BFA05D /* LaunchScreen.storyboard */; };
 		179FFBDF1F20DA8B00C5FBF5 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 179FFBDE1F20DA8B00C5FBF5 /* XKeyBoard.m */; };
+		17F7C8591F28BFA40047A8D0 /* pushBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7C8581F28BFA40047A8D0 /* pushBook.swift */; };
 		762D6DDC2BBEDAB63AD22B45 /* libPods-haoShu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84489A8E54B46FA7191E385 /* libPods-haoShu.a */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		179191E91F161E3E00BFA05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		179FFBDD1F20DA8B00C5FBF5 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
 		179FFBDE1F20DA8B00C5FBF5 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
+		17F7C8581F28BFA40047A8D0 /* pushBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pushBook.swift; sourceTree = "<group>"; };
 		3124DBE7F1148A68505FE5FC /* Pods-haoShu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haoShu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-haoShu/Pods-haoShu.debug.xcconfig"; sourceTree = "<group>"; };
 		9E7EF6787420D3A421D868D3 /* Pods-haoShu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haoShu.release.xcconfig"; path = "Pods/Target Support Files/Pods-haoShu/Pods-haoShu.release.xcconfig"; sourceTree = "<group>"; };
 		F84489A8E54B46FA7191E385 /* libPods-haoShu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-haoShu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +297,7 @@
 		171FE7A61F16445800D7A8F9 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				17F7C8581F28BFA40047A8D0 /* pushBook.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1757D6361F20432800DAC6CB /* AKSegmentedControl.m in Sources */,
+				17F7C8591F28BFA40047A8D0 /* pushBook.swift in Sources */,
 				171FE7AC1F1644FF00D7A8F9 /* GeneralFactory.swift in Sources */,
 				176597B71F1F735800D287FB /* LDXScore.m in Sources */,
 				1757633D1F1E437B00E65357 /* Push_CommentController.swift in Sources */,

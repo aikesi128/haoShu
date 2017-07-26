@@ -73,7 +73,7 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
         
         scoreStart?.highlightImg = UIImage.init(named: "btn_star_evaluation_press")
         
-        
+        NotificationCenter.default.addObserver(self, selector: Selector(("pushNotification:")), name: NSNotification.Name(rawValue: "pushBookNotification"), object: nil)
         
      }
 
@@ -117,6 +117,22 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
     }
     
     func sure(){
+        
+        let dict = [
+            
+            "BookName":(self.BookTitle?.BookName?.text)!,
+            "BookEditor":(self.BookTitle?.BookEditor?.text)!,
+            "BookCover":(self.BookTitle?.BookCover?.currentImage)!,
+            "title":self.Book_Title,
+            "score":String((self.scoreStart?.show_star)!),
+            "type":self.type,
+            "detaileType":self.detailType,
+            "description":self.comment
+        ] as [String : Any]
+        
+        pushBook.pushBookInBack(dict: dict as NSDictionary)
+        
+        
     
     
     }
@@ -410,5 +426,27 @@ class pushNewBookController: UIViewController,BookTitleViewDelegate,PhotoPickerD
     
     }
    
+    
+    
+    
+    func pushNotification(_ noti: NSNotification){
+    
+        let dic = noti.userInfo
+        
+        if ((dic?["success"]! as! String) == "true")
+        {
+            
+            ProgressHUD.showSuccess("上传成功")
+            
+            self.dismiss(animated: true, completion: nil)
+            
+        }else
+        {
+            ProgressHUD.showError("上传失败")
+        
+        }
+    
+    
+    }
 
 }
