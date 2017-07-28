@@ -8,8 +8,13 @@
 
 import UIKit
 
-class pushViewController: UIViewController {
+class pushViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
+    
+    var dataSource = NSMutableArray()
+    
+    var tableView: UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,13 +22,26 @@ class pushViewController: UIViewController {
         
         self.setNavigationBar()
         
-        // Do any additional setup after loading the view.
-    }
+        tableView = UITableView.init(frame: self.view.frame)
+        
+        tableView?.tableFooterView = UIView()
+        
+        tableView?.delegate = self
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        tableView?.dataSource = self
+        
+        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        
+        self.view.addSubview(tableView!)
+        
+        tableView?.mj_header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(pushViewController.headerRefresh))
+        
+        tableView?.mj_footer = MJRefreshBackNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(pushViewController.footerRefresh))
+        
+        tableView?.mj_footer.beginRefreshing()
+    
     }
+ 
     
     func setNavigationBar() {
         
@@ -63,5 +81,132 @@ class pushViewController: UIViewController {
         
         
     }
+    
+    //!< 下拉刷新，上拉加载
+    func headerRefresh(){
+        
+        let query = AVQuery.init(className: "Book")
+        
+        query.order(byDescending: "createdAt")
+        
+        query.limit = 20
+        
+        query.skip = 0
+        
+        query.whereKey("user", equalTo: AVUser.current()!)
+        
+        query.findObjectsInBackground { (result, error)
+            in
+            
+            self.tableView?.mj_header.endRefreshing()
+            
+            self.dataSource.removeAllObjects()
+            
+            self.dataSource.addObjects(from: result!)
+            
+            self.tableView?.reloadData()
+            
+            
+        }
+        
+        
+        
+        
+    }
+    
+    func footerRefresh(){
+        
+        let query = AVQuery.init(className: "Book")
+        
+        query.order(byDescending: "createdAt")
+        
+        query.limit = 20
+
+        query.skip = self.dataSource.count
+        
+        query.whereKey("user", equalTo: AVUser.current()!)
+        
+        query.findObjectsInBackground { (result, error) in
+            
+           let result1 = [1,2,3,4]
+            self.tableView?.mj_footer.endRefreshing()
+            
+            self.dataSource.addObjects(from: result1)
+            
+            self.tableView?.reloadData()
+        
+            
+        }
+        
+    }
+    
+    //!< tableView 代理方法
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return dataSource.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        
+        cell?.textLabel?.text = "Joyce"
+        
+        return cell!
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("did click at section\(indexPath.section),row\(indexPath.row)")
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
