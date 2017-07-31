@@ -30,7 +30,7 @@ class pushViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         tableView?.dataSource = self
         
-        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        tableView?.register(PushBookCell.classForCoder(), forCellReuseIdentifier: "cell")
         
         self.view.addSubview(tableView!)
         
@@ -38,7 +38,8 @@ class pushViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         tableView?.mj_footer = MJRefreshBackNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(pushViewController.footerRefresh))
         
-        tableView?.mj_footer.beginRefreshing()
+//        tableView?.mj_footer.beginRefreshing()
+        self.footerRefresh()
     
     }
  
@@ -127,11 +128,10 @@ class pushViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         query.whereKey("user", equalTo: AVUser.current()!)
         
         query.findObjectsInBackground { (result, error) in
-            
-           let result1 = [1,2,3,4]
+
             self.tableView?.mj_footer.endRefreshing()
             
-            self.dataSource.addObjects(from: result1)
+            self.dataSource.addObjects(from: result!)
             
             self.tableView?.reloadData()
         
@@ -141,6 +141,10 @@ class pushViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     //!< tableView 代理方法
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -156,9 +160,35 @@ class pushViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? PushBookCell
         
-        cell?.textLabel?.text = "Joyce"
+      
+        let dict = self.dataSource[indexPath.row] as? AVObject
+        
+        cell?.BookName?.text = "《" + (dict?["BookName"] as? String)! + "》:" + (dict!["title"] as! String)
+        
+        cell?.Editor?.text = "作者" + (dict?["BookEditor"] as! String)
+        
+        let date  = dict?["cratedAt"] as! NSDate
+        
+        let format = DateFormatter()
+        
+        format.dateFormat = "yyyy-MM-dd HH:mm"
+        
+        cell?.more?.text = format.string(from: date as Date)
+        
+        let coverFile = dict!["cover"] as? AVFile
+        
+        let image = UIImage.init(named: "Cover")
+        
+        let url = NSURL.init(string: (coverFile?.url!)!)
+        
+//        cell?.cover.sd
+        
+        cell?.cover?.sd_setImage(with: url! as URL, placeholderImage: image!)
+     
+        
+        
         
         return cell!
         
