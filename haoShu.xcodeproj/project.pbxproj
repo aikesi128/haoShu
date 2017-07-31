@@ -1171,7 +1171,7 @@
 				DEVELOPMENT_TEAM = 6H72553LUE;
 				INFOPLIST_FILE = haoShu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cesiumai.haoShu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlx.XBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = haoShu/bridging.h;
 				SWIFT_VERSION = 3.0;
@@ -1186,7 +1186,7 @@
 				DEVELOPMENT_TEAM = 6H72553LUE;
 				INFOPLIST_FILE = haoShu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cesiumai.haoShu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlx.XBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = haoShu/bridging.h;
 				SWIFT_VERSION = 3.0;
